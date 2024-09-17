@@ -10,6 +10,19 @@ body {
   background-color: var(--bg-body);
 }
 
+p,
+span,
+a,
+h1,
+h2,
+h3,
+ul,
+div,
+article,
+li {
+  color: var(--color-text);
+}
+
 .screen {
   display: flex;
   flex-direction: column;
