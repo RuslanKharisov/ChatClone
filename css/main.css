@@ -24,16 +24,15 @@
 	outline: none;
 } */
 /* Links */
-/* a, a:visited  {
-    color: inherit;
-    text-decoration: none;
-    display: inline-block;
-}
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block; }
 
-a:hover  {
-    color: inherit;
-    text-decoration: none;
-} */
+a:hover {
+  color: inherit;
+  text-decoration: none; }
+
 /* a:focus,
 a:active {
 	outline: none;
@@ -226,8 +225,7 @@ body {
   border: 1px solid #F4F4F4; }
 
 .footer {
-  width: 100%;
-  background-color: blueviolet; }
+  width: 100%; }
   @media (min-width: 767.98px) {
     .footer {
       padding-top: 0;
@@ -330,11 +328,118 @@ body {
   height: 100%;
   fill: currentColor; }
 
-.dialog__feedback {
+.footer__notes {
+  width: 100%;
+  position: relative;
+  padding: 0.5rem 0.5rem;
   text-align: center;
-  font-size: 12px;
-  color: #9e9e9e;
-  padding: 8px;
-  margin-top: 16px; }
+  font-size: 0.75rem;
+  line-height: 1rem; }
+  .footer__notes span {
+    font-size: 0.875rem;
+    line-height: 1; }
+  .footer__notes span > a {
+    text-decoration-line: underline; }
+  @media (min-width: 768px) {
+    .footer__notes {
+      padding-left: 60px;
+      padding-right: 60px; } }
+
+.footer_notes-wrapper {
+  min-height: 1rem; }
+
+.popover {
+  z-index: 50;
+  max-width: 20rem;
+  position: absolute;
+  top: 60px;
+  border-radius: 1rem;
+  display: none;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 0;
+  min-width: 21.25rem;
+  overflow: hidden;
+  outline: none;
+  animation: fade-in 0.3s ease-out; }
+  .popover.active {
+    display: block; }
+  .popover[data-side="bottom"] {
+    animation: slideUpAndFade 0.3s ease-out; }
+  .popover[data-side="left"] {
+    animation: slideRightAndFade 0.3s ease-out; }
+  .popover[data-side="right"] {
+    animation: slideLeftAndFade 0.3s ease-out; }
+  .popover[data-side="top"] {
+    animation: slideDownAndFade 0.3s ease-out; }
+  .popover .btn {
+    position: relative;
+    border-radius: 9999px; }
+
+.popover-content {
+  padding: 1rem; }
+
+.popover-text {
+  margin-bottom: 1rem; }
+
+.popover-heading {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #333333;
+  line-height: 150%; }
+
+.popover-subheading {
+  font-size: 0.875rem;
+  color: #666666;
+  line-height: 140%; }
+
+.popover-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem; }
+  .popover-buttons .btn {
+    font-size: 14px; }
+  .popover-buttons .btn--login,
+  .popover-buttons .btn--signup {
+    padding: 8px 14px; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes slideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes slideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-10px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(10px); }
+  to {
+    opacity: 1;
+    transform: translateX(0); } }
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=main.css.map */
