@@ -42,7 +42,7 @@ li {
   height: 100%;
 }
 
-.chat__area {
+.wellcome__page {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -55,37 +55,61 @@ li {
 }
 
 .chat__conversations {
-  flex-grow: 1;
+  height: 100%;
   overflow: hidden;
 }
 
 .conversations__wrapper {
   height: 100%;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .chat__message {
+  width: 100%;
   display: flex;
-  padding: 16px 0;
+  padding: 16px 12px;
+  margin: auto;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+.chat__container {
+  margin: 0 auto;
+
+  @media (min-width: 767.98px) {
+    max-width: 768px;
+  }
+}
+
+.chat__message-content {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .chat__message--assistant {
   gap: 1rem;
-}
 
-@media (min-width: 1024px) {
-  .chat__message--assistant {
+  @media (min-width: 767.98px) {
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
     gap: 1.5rem;
   }
 }
 
-@media (min-width: 768px) {
-  .chat__message--assistant {
-    gap: 1.25rem;
-  }
-}
 
-.chat__message--user .chat__message-content {
+
+.chat__message-content--user {
   background-color: #f4f4f4;
   color: #000;
   border-radius: 1.5rem;
@@ -94,7 +118,7 @@ li {
   margin-right: 16px;
 }
 
-.chat__message--user p {
+.chat__message-content--user p {
   padding: 0.625rem 1.25rem;
 }
 

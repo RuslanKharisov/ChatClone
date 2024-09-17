@@ -25,18 +25,9 @@
 } */
 /* Links */
 a, a:visited {
-  color: inherit;
   text-decoration: none;
   display: inline-block; }
 
-a:hover {
-  color: inherit;
-  text-decoration: none; }
-
-/* a:focus,
-a:active {
-	outline: none;
-} */
 /* Common */
 /* aside, nav, footer, header, section, main {
 	display: block;
@@ -120,7 +111,7 @@ li {
   position: relative;
   height: 100%; }
 
-.chat__area {
+.wellcome__page {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -131,27 +122,48 @@ li {
   color: var(--color-logo); }
 
 .chat__conversations {
-  flex-grow: 1;
+  height: 100%;
   overflow: hidden; }
 
 .conversations__wrapper {
   height: 100%;
-  overflow-y: auto; }
+  overflow-y: scroll; }
 
 .chat__message {
+  width: 100%;
   display: flex;
-  padding: 16px 0; }
+  padding: 16px 12px;
+  margin: auto;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .chat__message {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+  @media (min-width: 1280px) {
+    .chat__message {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
+
+.chat__container {
+  margin: 0 auto; }
+  @media (min-width: 767.98px) {
+    .chat__container {
+      max-width: 768px; } }
+
+.chat__message-content {
+  font-size: 1rem;
+  line-height: 1.5rem; }
 
 .chat__message--assistant {
   gap: 1rem; }
+  @media (min-width: 767.98px) {
+    .chat__message--assistant {
+      gap: 1.25rem; } }
+  @media (min-width: 1024px) {
+    .chat__message--assistant {
+      gap: 1.5rem; } }
 
-@media (min-width: 1024px) {
-  .chat__message--assistant {
-    gap: 1.5rem; } }
-@media (min-width: 768px) {
-  .chat__message--assistant {
-    gap: 1.25rem; } }
-.chat__message--user .chat__message-content {
+.chat__message-content--user {
   background-color: #f4f4f4;
   color: #000;
   border-radius: 1.5rem;
@@ -159,7 +171,7 @@ li {
   margin-left: auto;
   margin-right: 16px; }
 
-.chat__message--user p {
+.chat__message-content--user p {
   padding: 0.625rem 1.25rem; }
 
 .chat__message--assistant {
@@ -222,8 +234,7 @@ li {
 /* sections  */
 /* header stiles */
 .header {
-  position: absolute;
-  left: 0;
+  position: sticky;
   top: 0;
   width: 100%;
   display: flex;
@@ -267,7 +278,8 @@ li {
   background: none;
   border: none;
   padding: 8px 16px;
-  border-radius: 1.5rem; }
+  border-radius: 1.5rem;
+  font-size: 14px; }
 
 .btn--login {
   background-color: var(--bg-btnLogin);
@@ -277,6 +289,12 @@ li {
   border: 1px solid var(--btn-border);
   background-color: var(--bg-btnSignUp);
   color: var(--color-btnSignUp); }
+
+.header__rightside button {
+  background-color: greenyellow;
+  font-size: 10px;
+  border-radius: 26px;
+  padding: 5px 10px; }
 
 .footer {
   width: 100%; }
@@ -423,7 +441,7 @@ li {
   margin-inline-end: 0.25rem;
   background-color: #000000;
   color: #ffffff;
-  cursor: not-allowed;
+  cursor: pointer;
   transition: opacity 0.3s; }
 
 .dialog__send-button:disabled {

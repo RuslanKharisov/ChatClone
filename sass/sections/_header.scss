@@ -1,8 +1,9 @@
 /* header stiles */
 
 .header {
-  position: absolute;
-  left: 0;
+  // position: absolute;
+  // left: 0;
+  position: sticky;
   top: 0;
   width: 100%;
   display: flex;
@@ -55,6 +56,7 @@
   border: none;
   padding: 8px 16px;
   border-radius: 1.5rem;
+  font-size: 14px;
 }
 
 .btn--login {
@@ -67,4 +69,11 @@
 
   background-color: var(--bg-btnSignUp);
   color: var(--color-btnSignUp);
+}
+
+.header__rightside button {
+  background-color: greenyellow;
+  font-size: 10px;
+  border-radius: 26px;
+  padding: 5px 10px;
 }

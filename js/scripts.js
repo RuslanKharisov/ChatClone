@@ -1,16 +1,30 @@
 const textarea = document.getElementById("prompt-textarea");
 const sendButton = document.querySelector(".dialog__send-button");
 const theme = document.querySelector("#theme");
+const wellcome__page = document.getElementById("wellcome__page")
+const btns_grid = document.getElementById("btns_grid")
+const chat = document.getElementById("chat")
+
 
 theme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
+sendButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("click")
+  wellcome__page.style.display = "none";
+  btns_grid.style.display = "none";
+  if (wellcome__page.style.display === "none" && btns_grid.style.display === "none"){
+    chat.style.display = "block";
+  }
+})
+
 initPopoverAuth();
 
 textarea.addEventListener("input", function () {
   if (textarea.textContent.trim() !== "") {
-    textarea.classList.add("has-content");
+    textarea.classList.add("has-content");    
     sendButton.disabled = false;
   } else {
     textarea.classList.remove("has-content");
