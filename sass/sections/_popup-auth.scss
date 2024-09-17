@@ -6,7 +6,7 @@
   top: 60px;
   border-radius: 1rem; // 16px
   display: none;
-  background-color: white;
+  background-color: var(--bg-body);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #e0e0e0;
   padding: 0.5rem 0; // 8px
@@ -56,13 +56,13 @@
   font-size: 1rem; // 16px
   margin-bottom: 0.25rem; // 4px
   font-weight: 500;
-  color: #333333;
+  color: var(--popoverHeading);
   line-height: 150%;
 }
 
 .popover-subheading {
   font-size: 0.875rem; // 14px
-  color: #666666;
+  color: var(--popoverText);
   line-height: 140%;
 }
 

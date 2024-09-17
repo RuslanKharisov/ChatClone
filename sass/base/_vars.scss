@@ -1,0 +1,53 @@
+:root {
+  --bg-body: #fff;
+
+  --color-secondary: #7d7d7d;
+
+  // Header auth btns
+  --bg-btnLogin: #000000;
+  --color-btnLogin: #fff;
+
+  --bg-btnSignUp: #fff;
+  --color-btnSignUp: #000;
+  // /Header auth btns
+
+  --color-searchInp: #f4f4f4;
+  --bg-sendBtn: #d7d7d7;
+
+  --color-logo: #000;
+
+  //Popup Auth
+  --btnTriggerHover: #f9f9f9;
+  --popoverHeading: #333333;
+  --popoverText: #666666;
+  // /Popup Auth
+
+  --footer-text: #000000;
+}
+
+.dark {
+  --bg-body: #212121;
+
+  --color-secondary: #b4b4b4;
+
+  // Header auth btns
+  --bg-btnLogin: #f9f9f9;
+  --color-btnLogin: #000;
+
+  --bg-btnSignUp: transparent;
+  --color-btnSignUp: #fff;
+  // /Header auth btns
+
+  --color-searchInp: #2f2f2f;
+  --bg-sendBtn: #676767;
+
+  --color-logo: #fff;
+
+  //Popup Auth
+  --btnTriggerHover: #2f2f2f;
+  --popoverHeading: #f9f9f9;
+  --popoverText: #e3e3e3;
+  // /Popup Auth
+
+  --footer-text: #b4b4b4;
+}

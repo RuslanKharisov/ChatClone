@@ -1,5 +1,10 @@
 const textarea = document.getElementById("prompt-textarea");
 const sendButton = document.querySelector(".dialog__send-button");
+const theme = document.querySelector("#theme");
+
+theme.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 
 initPopoverAuth();
 

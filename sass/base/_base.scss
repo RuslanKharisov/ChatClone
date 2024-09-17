@@ -1,14 +1,16 @@
 body {
-  font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica,
+    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
   height: 100vh;
   overflow: hidden;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--bg-body);
 }
 
-.screen{
+.screen {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -22,12 +24,12 @@ body {
   overflow: hidden;
 }
 
-.chat{
+.chat {
   position: relative;
   height: 100%;
 }
 
-.chat__area{
+.chat__area {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -35,42 +37,43 @@ body {
   align-items: center;
 }
 
-.chat__conversations{
+.chat__area svg {
+  color: var(--color-logo);
+}
+
+.chat__conversations {
   flex-grow: 1;
   overflow: hidden;
 }
 
-.conversations__wrapper{
+.conversations__wrapper {
   height: 100%;
   overflow-y: auto;
 }
-
 
 .chat__message {
   display: flex;
   padding: 16px 0;
 }
 
-.chat__message--assistant{
+.chat__message--assistant {
   gap: 1rem;
 }
 
 @media (min-width: 1024px) {
-  .chat__message--assistant  {
-      gap: 1.5rem;
+  .chat__message--assistant {
+    gap: 1.5rem;
   }
 }
 
 @media (min-width: 768px) {
   .chat__message--assistant {
-      gap: 1.25rem;
+    gap: 1.25rem;
   }
 }
 
-
-
 .chat__message--user .chat__message-content {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   color: #000;
   border-radius: 1.5rem;
   max-width: 70%;
@@ -79,7 +82,7 @@ body {
 }
 
 .chat__message--user p {
-  padding: .625rem 1.25rem;
+  padding: 0.625rem 1.25rem;
 }
 
 .chat__message--assistant {
@@ -107,8 +110,3 @@ body {
   width: 100%;
   height: 100%;
 }
-
-
-
-
-
