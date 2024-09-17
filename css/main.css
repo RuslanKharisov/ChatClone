@@ -233,6 +233,14 @@ body {
       padding-top: 0;
       border: transparent; } }
 
+.dialog {
+  width: 100%;
+  padding: 0 0.75rem; }
+  @media (min-width: 768px) {
+    .dialog {
+      padding-left: 1rem;
+      padding-right: 1rem; } }
+
 .dialog__container {
   max-width: 768px;
   margin: 0 auto; }
