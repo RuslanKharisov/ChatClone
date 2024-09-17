@@ -1,22 +1,56 @@
-const textarea = document.getElementById('prompt-textarea');
-const sendButton = document.querySelector('.dialog__send-button')
+const textarea = document.getElementById("prompt-textarea");
+const sendButton = document.querySelector(".dialog__send-button");
 
-textarea.addEventListener('input', function() {
-  if (textarea.textContent.trim() !== '') {
-    textarea.classList.add('has-content');
+initPopoverAuth();
+
+textarea.addEventListener("input", function () {
+  if (textarea.textContent.trim() !== "") {
+    textarea.classList.add("has-content");
     sendButton.disabled = false;
   } else {
-    textarea.classList.remove('has-content');
+    textarea.classList.remove("has-content");
     sendButton.disabled = true;
   }
 });
 
-if (textarea.textContent.trim() !== '') {
-  textarea.classList.add('has-content');
+if (textarea.textContent.trim() !== "") {
+  textarea.classList.add("has-content");
   sendButton.disabled = false;
 } else {
-  textarea.classList.remove('has-content');
+  textarea.classList.remove("has-content");
   sendButton.disabled = true;
+}
+
+// Инициализация popover с авторизацией
+function initPopoverAuth() {
+  const popoverAuth = document.getElementById("popover-auth");
+  const popoverAuthTrigger = document.getElementById("popover-auth--trigger");
+
+  // Показываем popover при клике на триггер
+  popoverAuthTrigger.addEventListener("click", (event) => {
+    event.stopPropagation(); // Останавливаем всплытие события
+
+    if (popoverAuth.classList.contains("active")) {
+      popoverAuth.classList.remove("active");
+    } else {
+      popoverAuth.classList.add("active");
+    }
+  });
+
+  // Убираем активность при клике вне popoverAuth
+  document.addEventListener("click", (event) => {
+    if (
+      !popoverAuth.contains(event.target) &&
+      event.target !== popoverAuthTrigger
+    ) {
+      popoverAuth.classList.remove("active");
+    }
+  });
+
+  // Останавливаем всплытие события, чтобы клик на popover не закрыл его
+  popoverAuth.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
 }
 
 // document.addEventListener('DOMContentLoaded', () => {
