@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+  .popover-additional {
+    display: none;
+  }
+}
+
 .popover-additional__trigger {
   position: absolute;
   bottom: 0.5rem;
