@@ -317,7 +317,6 @@ li {
 
 .dialog {
   width: 100%;
-  padding: 0 0.75rem;
   margin: auto;
   font-size: 1rem;
   line-height: 1.5rem; }
@@ -326,7 +325,8 @@ li {
       padding: 0 1.25rem; } }
 
 .dialog__container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 0.75rem; }
   @media (min-width: 768px) {
     .dialog__container {
       max-width: 768px; } }
@@ -486,7 +486,7 @@ li {
   font-size: 0.75rem;
   line-height: 1rem; }
   .footer__notes span {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     line-height: 1;
     color: var(--footer-text); }
   .footer__notes span > a {
