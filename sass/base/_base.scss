@@ -9,6 +9,14 @@ body {
   background-color: var(--bg-body);
 }
 
+.container {
+  width: 100%;
+
+  @media (min-width: 767.98px) {
+    max-width: 768px;
+  }
+}
+
 p,
 span,
 a,
