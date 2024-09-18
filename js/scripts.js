@@ -1,10 +1,9 @@
 const textarea = document.getElementById("prompt-textarea");
 const sendButton = document.querySelector(".dialog__send-button");
 const theme = document.querySelector("#theme");
-const wellcome__page = document.getElementById("wellcome__page")
-const btns_grid = document.getElementById("btns_grid")
-const chat = document.getElementById("chat")
-
+const wellcome__page = document.getElementById("wellcome__page");
+const btns_grid = document.getElementById("btns_grid");
+const chat = document.getElementById("chat");
 
 theme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
@@ -12,19 +11,23 @@ theme.addEventListener("click", () => {
 
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log("click")
+  console.log("click");
   wellcome__page.style.display = "none";
   btns_grid.style.display = "none";
-  if (wellcome__page.style.display === "none" && btns_grid.style.display === "none"){
+  if (
+    wellcome__page.style.display === "none" &&
+    btns_grid.style.display === "none"
+  ) {
     chat.style.display = "block";
   }
-})
+});
 
 initPopoverAuth();
+initModalClearChat();
 
 textarea.addEventListener("input", function () {
   if (textarea.textContent.trim() !== "") {
-    textarea.classList.add("has-content");    
+    textarea.classList.add("has-content");
     sendButton.disabled = false;
   } else {
     textarea.classList.remove("has-content");
@@ -42,8 +45,11 @@ if (textarea.textContent.trim() !== "") {
 
 // Инициализация popover с авторизацией
 function initPopoverAuth() {
-  const popoverAuth = document.getElementById("popover-auth");
+  // Кнопка при нажатии на которую будет высвечиваться popup
   const popoverAuthTrigger = document.getElementById("popover-auth--trigger");
+
+  // Сам popup
+  const popoverAuth = document.getElementById("popover-auth");
 
   // Показываем popover при клике на триггер
   popoverAuthTrigger.addEventListener("click", (event) => {
@@ -69,6 +75,33 @@ function initPopoverAuth() {
   // Останавливаем всплытие события, чтобы клик на popover не закрыл его
   popoverAuth.addEventListener("click", (event) => {
     event.stopPropagation();
+  });
+}
+
+// Инициализация модального окна для очистки чата
+function initModalClearChat() {
+  // Кнопка при нажатии на которую будет высвечиваться модалка
+  const clearChatTrigger = document.getElementById("clearChat--trigger");
+  const clearChatClose = document.getElementById("clearChat--close");
+
+  // Сама модалка
+  const clearChat = document.getElementById("clearChat");
+
+  // Открытие
+  clearChatTrigger.addEventListener("click", () => {
+    clearChat.classList.add("active");
+  });
+
+  // Закрытие
+  clearChatClose.addEventListener("click", () => {
+    clearChat.classList.remove("active");
+  });
+
+  // Закрытие модального окна при клике вне модального окна
+  clearChat.addEventListener("click", (event) => {
+    if (event.target === clearChat) {
+      clearChat.classList.remove("active");
+    }
   });
 }
 
