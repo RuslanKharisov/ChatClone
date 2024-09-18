@@ -164,8 +164,9 @@
 
 .dialog__textarea::before {
   content: attr(data-placeholder);
-  position: absolute;
-  left: 10px;
+  // position: absolute;
+  // top: 10px;
+  // left: 10px;
   color: #aaa;
   pointer-events: none;
 }
@@ -176,7 +177,7 @@
 
 .dialog__send-button {
   display: flex;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   width: 2rem;
   height: 2rem;
