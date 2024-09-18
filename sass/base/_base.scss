@@ -70,7 +70,7 @@ li {
 .chat__message {
   width: 100%;
   display: flex;
-  padding: 16px 12px;
+  padding: 18px 12px;
   margin: auto;
 
   @media (min-width: 768px) {
@@ -116,7 +116,7 @@ li {
   border-radius: 1.5rem;
   max-width: 70%;
   margin-left: auto;
-  margin-right: 16px;
+  // margin-right: 16px;
 }
 
 .chat__message-content--user p {
