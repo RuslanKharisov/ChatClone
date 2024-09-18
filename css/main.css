@@ -384,7 +384,7 @@ li {
     overflow: hidden; }
 
 .dialog__form_btn:hover {
-  background-color: #f9f9f9; }
+  background-color: var(--btnTriggerHover); }
 
 /* dialog input styles */
 .dialog__input-wrapper {
@@ -612,7 +612,7 @@ li {
   opacity: 1; }
 
 .modal {
-  background-color: white;
+  background-color: var(--bg-body);
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
@@ -652,6 +652,6 @@ li {
     gap: 8px;
     margin-bottom: 20px; }
     .modal-reset__description p {
-      color: #666; }
+      color: var(--popoverText); }
 
 /*# sourceMappingURL=main.css.map */
