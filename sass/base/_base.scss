@@ -43,14 +43,26 @@ li {
 
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 }
 
 .wellcome__page {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 0 24px;
+
+  svg{
+    width: 46px;
+    height: 46px;
+  }
+
+  @media (min-width: 767.98px) {
+    margin: 0;
+    flex-grow: 1;
+  }
+
 }
 
 .chat__area svg {
