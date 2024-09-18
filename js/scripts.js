@@ -9,6 +9,14 @@ theme.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
+// Применить тему при загрузке страницы
+const systemPrefersDark = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+
+applyTheme(systemPrefersDark ? "dark" : "light");
+// / Применить тему при загрузке страницы
+
 sendButton.addEventListener("click", (event) => {
   event.preventDefault();
   console.log("click");
@@ -24,6 +32,7 @@ sendButton.addEventListener("click", (event) => {
 
 initPopoverAuth();
 initModalClearChat();
+initPopoverAdditional();
 
 textarea.addEventListener("input", function () {
   if (textarea.textContent.trim() !== "") {
@@ -103,6 +112,34 @@ function initModalClearChat() {
       clearChat.classList.remove("active");
     }
   });
+}
+
+// Инициализация popover при нажатии на знак вопроса внизу справа
+function initPopoverAdditional() {
+  const popover = document.getElementById("popover-additional");
+  const trigger = document.getElementById("popover-additional--trigger");
+
+  trigger.addEventListener("click", () => {
+    popover.classList.toggle("visible");
+  });
+
+  // Закрытие поповера при клике вне его области
+  document.addEventListener("click", (event) => {
+    if (!popover.contains(event.target) && !trigger.contains(event.target)) {
+      popover.classList.remove("visible");
+    }
+  });
+}
+
+// Добавление ночного режима
+function applyTheme(theme) {
+  if (theme === "dark") {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light-theme");
+  } else {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark");
+  }
 }
 
 // document.addEventListener('DOMContentLoaded', () => {

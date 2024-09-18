@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0", viewport-fit=cover />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      viewport-fit="cover"
+    />
     <title>Chat Interface</title>
     <link rel="stylesheet" href="./css/main.css" />
     <link
@@ -13,8 +17,8 @@
 
   <body>
     <div class="screen">
-      <div class="temp_menu-menu" style="display: none">
-          <button  id="theme">Сменить тему</button>
+      <div class="temp_menu-menu">
+        <button id="theme">Сменить тему</button>
       </div>
       <header class="header">
         <button id="clearChat--trigger" class="btn--new-chat">
@@ -33,7 +37,6 @@
           </svg>
         </button>
         <div class="header__leftside">
-
           <div class="chat__model">
             <button id="popover-auth--trigger" class="btn--model-selector">
               <div class="chat__model-text">ChatGPT 4o mini</div>
@@ -55,9 +58,7 @@
             <div id="popover-auth" role="menu" class="popover">
               <div class="popover-content">
                 <div class="popover-text">
-                  <p class="popover-heading">
-                    Log in to try advanced features
-                  </p>
+                  <p class="popover-heading">Log in to try advanced features</p>
                   <p class="popover-subheading">
                     Get smarter responses, upload files, analyze images, and
                     more by logging in.
@@ -84,7 +85,6 @@
       </header>
       <div class="screen_wapper">
         <div class="chat">
-
           <!-- Приветственная иконца GPT - !!!скрыта как начат чат!!! -->
 
           <div id="wellcome__page" class="wellcome__page">
@@ -536,6 +536,125 @@
           </div>
         </div>
       </div>
+
+      <!-- Popup additional -->
+      <div class="popover-additional">
+        <div id="popover-additional" class="popover-additional__body">
+          <div class="menu">
+            <a href="#" class="menu-item">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <span>test@gmail.com</span>
+            </a>
+
+            <a href="#" class="menu-item">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15 5C14.4477 5 14 4.55228 14 4C14 3.44772 14.4477 3 15 3H20C20.5523 3 21 3.44772 21 4V9C21 9.55228 20.5523 10 20 10C19.4477 10 19 9.55228 19 9V6.41421L13.7071 11.7071C13.3166 12.0976 12.6834 12.0976 12.2929 11.7071C11.9024 11.3166 11.9024 10.6834 12.2929 10.2929L17.5858 5H15ZM4 7C4 5.34315 5.34315 4 7 4H10C10.5523 4 11 4.44772 11 5C11 5.55228 10.5523 6 10 6H7C6.44772 6 6 6.44772 6 7V17C6 17.5523 6.44772 18 7 18H17C17.5523 18 18 17.5523 18 17V14C18 13.4477 18.4477 13 19 13C19.5523 13 20 13.4477 20 14V17C20 18.6569 18.6569 20 17 20H7C5.34315 20 4 18.6569 4 17V7Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <p>Help &amp; FAQ</p>
+            </a>
+
+            <a href="#" class="menu-item">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15 5C14.4477 5 14 4.55228 14 4C14 3.44772 14.4477 3 15 3H20C20.5523 3 21 3.44772 21 4V9C21 9.55228 20.5523 10 20 10C19.4477 10 19 9.55228 19 9V6.41421L13.7071 11.7071C13.3166 12.0976 12.6834 12.0976 12.2929 11.7071C11.9024 11.3166 11.9024 10.6834 12.2929 10.2929L17.5858 5H15ZM4 7C4 5.34315 5.34315 4 7 4H10C10.5523 4 11 4.44772 11 5C11 5.55228 10.5523 6 10 6H7C6.44772 6 6 6.44772 6 7V17C6 17.5523 6.44772 18 7 18H17C17.5523 18 18 17.5523 18 17V14C18 13.4477 18.4477 13 19 13C19.5523 13 20 13.4477 20 14V17C20 18.6569 18.6569 20 17 20H7C5.34315 20 4 18.6569 4 17V7Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <p>Release notes</p>
+            </a>
+
+            <a href="#" class="menu-item">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15 5C14.4477 5 14 4.55228 14 4C14 3.44772 14.4477 3 15 3H20C20.5523 3 21 3.44772 21 4V9C21 9.55228 20.5523 10 20 10C19.4477 10 19 9.55228 19 9V6.41421L13.7071 11.7071C13.3166 12.0976 12.6834 12.0976 12.2929 11.7071C11.9024 11.3166 11.9024 10.6834 12.2929 10.2929L17.5858 5H15ZM4 7C4 5.34315 5.34315 4 7 4H10C10.5523 4 11 4.44772 11 5C11 5.55228 10.5523 6 10 6H7C6.44772 6 6 6.44772 6 7V17C6 17.5523 6.44772 18 7 18H17C17.5523 18 18 17.5523 18 17V14C18 13.4477 18.4477 13 19 13C19.5523 13 20 13.4477 20 14V17C20 18.6569 18.6569 20 17 20H7C5.34315 20 4 18.6569 4 17V7Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <p>Terms &amp; policies</p>
+            </a>
+
+            <a href="#" class="menu-item">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.5 4.91421L4.29289 6.12132C4.10536 6.30886 4 6.56321 4 6.82843V16.9472L5.5 14.6972V4.91421ZM7.03518 16L5.03518 19H18.9648L16.9648 16H7.03518ZM18.5 14.6972L20 16.9472V6.43675C20 6.13997 19.8682 5.85852 19.6402 5.66853L18.5 4.71838V14.6972ZM16.5 14V4H7.5V14H16.5ZM4.70711 2.87868C5.26972 2.31607 6.03278 2 6.82843 2H17.2759C17.9777 2 18.6573 2.24605 19.1965 2.69534L20.9206 4.13209C21.6045 4.70207 22 5.54641 22 6.43675V18C22 19.6569 20.6569 21 19 21H5C3.34315 21 2 19.6569 2 18V6.82843C2 6.03278 2.31607 5.26972 2.87868 4.70711L4.70711 2.87868Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M12.6297 5.93615C12.6974 5.57624 12.3408 5.34363 12.1528 5.62504L9.56654 9.49667C9.41387 9.72521 9.54081 10.0776 9.7758 10.0776H11.7435L11.3703 12.0639C11.3026 12.4238 11.6592 12.6564 11.8472 12.375L14.4335 8.50333C14.5861 8.27479 14.4592 7.92238 14.2242 7.92238H12.2565L12.6297 5.93615Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+
+              <span>Keyboard shortcuts</span>
+            </a>
+          </div>
+        </div>
+
+        <div
+          id="popover-additional--trigger"
+          class="popover-additional__trigger"
+        >
+          <button type="button">?</button>
+        </div>
+      </div>
+      <!-- / Popup additional -->
     </div>
 
     <!-- Modal -->

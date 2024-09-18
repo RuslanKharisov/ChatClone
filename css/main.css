@@ -205,6 +205,7 @@ li {
   --btnTriggerHover: #f9f9f9;
   --popoverHeading: #333333;
   --popoverText: #666666;
+  --bg-hover: #f5f5f5;
   --btn-border: #d7d7d7;
   --color-text: #000000;
   --footer-text: #000000; }
@@ -222,6 +223,7 @@ li {
   --btnTriggerHover: #2f2f2f;
   --popoverHeading: #f9f9f9;
   --popoverText: #e3e3e3;
+  --bg-hover: #424242;
   --btn-border: hsla(0, 0%, 100%, 0.1);
   --color-text: #ffffff;
   --footer-text: #b4b4b4; }
@@ -652,5 +654,75 @@ li {
     margin-bottom: 20px; }
     .modal-reset__description p {
       color: var(--popoverText); }
+
+.popover-additional__trigger {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 20;
+  display: none;
+  gap: 0.25rem; }
+  @media (min-width: 768px) {
+    .popover-additional__trigger {
+      display: flex; } }
+  @media (min-width: 1024px) {
+    .popover-additional__trigger {
+      bottom: 0.75rem;
+      right: 0.75rem; } }
+  .popover-additional__trigger button {
+    display: flex;
+    height: 1.5rem;
+    width: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid var(--btn-border);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    cursor: pointer; }
+    .popover-additional__trigger button:focus {
+      outline: none; }
+
+.popover-additional__body {
+  position: fixed;
+  right: 15px;
+  bottom: 35px;
+  z-index: 50;
+  min-width: max-content;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-body);
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 10px 0;
+  overflow: hidden;
+  max-width: 280px;
+  width: 100%;
+  font-weight: 300;
+  display: none; }
+  .popover-additional__body.visible {
+    display: block; }
+  .popover-additional__body .menu {
+    display: flex;
+    flex-direction: column; }
+    .popover-additional__body .menu .menu-item {
+      padding: 12px;
+      margin: 0 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 8px; }
+      .popover-additional__body .menu .menu-item:hover {
+        background-color: var(--bg-hover); }
+      .popover-additional__body .menu .menu-item svg {
+        width: 20px;
+        height: 20px;
+        color: var(--color-secondary); }
+      .popover-additional__body .menu .menu-item a {
+        text-decoration: none;
+        display: block;
+        width: 100%; }
 
 /*# sourceMappingURL=main.css.map */
