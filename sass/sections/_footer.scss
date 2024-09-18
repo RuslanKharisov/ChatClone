@@ -94,7 +94,7 @@
 }
 
 .dialog__form_btn:hover {
-  background-color: #f9f9f9;
+  background-color: var(--btnTriggerHover);
 }
 
 /* dialog input styles */
@@ -157,7 +157,6 @@
     overflow-wrap: break-word; /* Переносит длинные слова */
   }
 }
-
 
 [contenteditable]:focus {
   outline: 0px solid transparent;
