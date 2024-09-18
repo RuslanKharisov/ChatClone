@@ -80,6 +80,7 @@ body {
     .container {
       max-width: 768px; } }
 
+.dialog__textarea,
 p,
 span,
 a,
@@ -208,6 +209,7 @@ li {
   --color-searchInp: #f4f4f4;
   --bg-sendBtn: #d7d7d7;
   --color-logo: #000;
+  --bg-popup: #fff;
   --btnTriggerHover: #f9f9f9;
   --popoverHeading: #333333;
   --popoverText: #666666;
@@ -226,6 +228,7 @@ li {
   --color-searchInp: #2f2f2f;
   --bg-sendBtn: #676767;
   --color-logo: #fff;
+  --bg-popup: #2f2f2f;
   --btnTriggerHover: #2f2f2f;
   --popoverHeading: #f9f9f9;
   --popoverText: #e3e3e3;
@@ -437,7 +440,6 @@ li {
   min-height: 16px;
   margin: 0.5rem 0;
   font-size: 16px;
-  color: #000;
   background-color: transparent;
   overflow-y: auto;
   word-wrap: break-word;
@@ -510,12 +512,12 @@ li {
   z-index: 50;
   max-width: 20rem;
   position: absolute;
-  top: 60px;
+  top: 57px;
   border-radius: 1rem;
   display: none;
-  background-color: var(--bg-body);
+  background-color: var(--bg-popup);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--btn-border);
   padding: 0.5rem 0;
   min-width: 21.25rem;
   overflow: hidden;
@@ -619,7 +621,7 @@ li {
   opacity: 1; }
 
 .modal {
-  background-color: var(--bg-body);
+  background-color: var(--bg-popup);
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
@@ -699,9 +701,9 @@ li {
   z-index: 50;
   min-width: max-content;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  background-color: var(--bg-body);
+  background-color: var(--bg-popup);
   border-radius: 12px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--btn-border);
   padding: 10px 0;
   overflow: hidden;
   max-width: 280px;
