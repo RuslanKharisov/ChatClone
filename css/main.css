@@ -236,8 +236,9 @@ li {
   padding: 0.75rem;
   z-index: 1000; }
 
-.header__leftside {
-  display: flex; }
+@media (min-width: 767.98px) {
+  .header__leftside {
+    flex-grow: 1; } }
 
 .btn--new-chat {
   padding: 0 0.5rem;
@@ -280,11 +281,28 @@ li {
   color: var(--color-btnLogin); }
 
 .btn--signup {
+  display: none;
   border: 1px solid var(--btn-border);
   background-color: var(--bg-btnSignUp);
   color: var(--color-btnSignUp); }
+  @media (min-width: 767.98px) {
+    .btn--signup {
+      display: block; } }
 
 .header__rightside button {
+  background-color: greenyellow;
+  font-size: 10px;
+  border-radius: 26px;
+  padding: 5px 10px; }
+
+.temp_menu-menu {
+  background-color: #dadada;
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  justify-content: center; }
+
+.temp_menu-menu button {
   background-color: greenyellow;
   font-size: 10px;
   border-radius: 26px;
