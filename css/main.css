@@ -158,8 +158,7 @@ li {
       gap: 1.5rem; } }
 
 .chat__message-content--user {
-  background-color: #f4f4f4;
-  color: #000;
+  background-color: var(--color-searchInp);
   border-radius: 1.5rem;
   max-width: 70%;
   margin-left: auto;
@@ -245,7 +244,7 @@ li {
   border-radius: 0.5rem; }
 
 .btn--new-chat:hover {
-  background-color: #ececec; }
+  background-color: var(--btnTriggerHover); }
 
 .btn--model-selector div {
   color: var(--color-secondary); }
@@ -509,7 +508,8 @@ li {
     animation: slideDownAndFade 0.3s ease-out; }
   .popover .btn {
     position: relative;
-    border-radius: 9999px; }
+    border-radius: 9999px;
+    cursor: pointer; }
 
 .popover-content {
   padding: 1rem; }

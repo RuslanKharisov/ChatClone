@@ -111,11 +111,9 @@ li {
   }
 }
 
-
-
 .chat__message-content--user {
-  background-color: #f4f4f4;
-  color: #000;
+  background-color: var(--color-searchInp);
+
   border-radius: 1.5rem;
   max-width: 70%;
   margin-left: auto;

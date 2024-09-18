@@ -21,7 +21,7 @@
 }
 
 .btn--new-chat:hover {
-  background-color: #ececec;
+  background-color: var(--btnTriggerHover);
 }
 .btn--model-selector div {
   color: var(--color-secondary);
