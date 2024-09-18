@@ -3,7 +3,7 @@ body {
     "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +46,6 @@ li {
 }
 
 .wellcome__page {
-  // height: 100%;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -73,7 +72,6 @@ li {
   display: flex;
   padding: 16px 12px;
   margin: auto;
-  width: 100%;
 
   @media (min-width: 768px) {
     padding-left: 1rem;
@@ -100,6 +98,7 @@ li {
 }
 
 .chat__message--assistant {
+  display: flex;
   gap: 1rem;
 
   @media (min-width: 767.98px) {
@@ -124,9 +123,6 @@ li {
   padding: 0.625rem 1.25rem;
 }
 
-.chat__message--assistant {
-  display: flex;
-}
 
 .chat__message--assistant .chat__message-content {
   color: #000;
