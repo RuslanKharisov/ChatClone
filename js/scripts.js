@@ -1,4 +1,4 @@
-const textarea = document.getElementById("prompt-textarea");
+const textarea = document.getElementById("textarea");
 const sendButton = document.querySelector(".dialog__send-button");
 const theme = document.querySelector("#theme");
 const wellcome__page = document.getElementById("wellcome__page");
@@ -34,23 +34,23 @@ initPopoverAuth();
 initModalClearChat();
 initPopoverAdditional();
 
-// textarea.addEventListener("input", function () {
-//   if (textarea.textContent.trim() !== "") {
-//     textarea.classList.add("has-content");
-//     sendButton.disabled = false;
-//   } else {
-//     textarea.classList.remove("has-content");
-//     sendButton.disabled = true;
-//   }
-// });
+textarea.addEventListener("input", function () {
+  if (textarea.textContent.trim() !== "") {
+    textarea.classList.add("has-content");
+    sendButton.disabled = false;
+  } else {
+    textarea.classList.remove("has-content");
+    sendButton.disabled = true;
+  }
+});
 
-// if (textarea.textContent.trim() !== "") {
-//   textarea.classList.add("has-content");
-//   sendButton.disabled = false;
-// } else {
-//   textarea.classList.remove("has-content");
-//   sendButton.disabled = true;
-// }
+if (textarea.textContent.trim() !== "") {
+  textarea.classList.add("has-content");
+  sendButton.disabled = false;
+} else {
+  textarea.classList.remove("has-content");
+  sendButton.disabled = true;
+}
 
 // Инициализация popover с авторизацией
 function initPopoverAuth() {
