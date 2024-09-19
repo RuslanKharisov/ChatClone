@@ -155,13 +155,13 @@
 
 // test
 
-div[contenteditable] {
+#textarea {
   margin: 0.5rem 0;
   overflow-wrap: break-word;
   
 
   /* Placeholder code */
-  &[placeholder]:empty::before {
+  &.empty::before {
     content: attr(placeholder);
     z-index: 9;
     line-height: 1.5;
@@ -170,19 +170,14 @@ div[contenteditable] {
     user-select: none;
   }
 
-  &[placeholder]:empty:focus::before {
+  &.empty:focus::before {
     content: "";
   }
+
+  &.empty {
+    position: relative;
+  }
 }
-
-// test
-
-
-// .dialog__textarea::before {
-//   content: attr(data-placeholder);
-//   color: #aaa;
-//   pointer-events: none;
-// }
 
 .dialog__textarea.has-content::before {
   display: none;

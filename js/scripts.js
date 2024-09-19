@@ -34,21 +34,37 @@ initPopoverAuth();
 initModalClearChat();
 initPopoverAdditional();
 
+function togglePlaceholder() {
+  if (textarea.textContent.trim() === '') {
+    textarea.classList.add('empty');
+  } else {
+    textarea.classList.remove('empty');
+  }
+}
+
+// События ввода и фокусировки для обработки состояния плейсхолдера
+textarea.addEventListener('input', togglePlaceholder);
+textarea.addEventListener('focus', togglePlaceholder);
+textarea.addEventListener('blur', togglePlaceholder);
+
+// Первоначальная проверка на состояние контента
+togglePlaceholder();
+
 textarea.addEventListener("input", function () {
   if (textarea.textContent.trim() !== "") {
-    textarea.classList.add("has-content");
+    // textarea.classList.add("has-content");
     sendButton.disabled = false;
   } else {
-    textarea.classList.remove("has-content");
+    // textarea.classList.remove("has-content");
     sendButton.disabled = true;
   }
 });
 
 if (textarea.textContent.trim() !== "") {
-  textarea.classList.add("has-content");
+  // textarea.classList.add("has-content");
   sendButton.disabled = false;
 } else {
-  textarea.classList.remove("has-content");
+  // textarea.classList.remove("has-content");
   sendButton.disabled = true;
 }
 

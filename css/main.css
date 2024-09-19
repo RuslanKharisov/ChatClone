@@ -450,19 +450,21 @@ li {
 [contenteditable]:focus {
   outline: 0px solid transparent; }
 
-div[contenteditable] {
+#textarea {
   margin: 0.5rem 0;
   overflow-wrap: break-word;
   /* Placeholder code */ }
-  div[contenteditable][placeholder]:empty::before {
+  #textarea.empty::before {
     content: attr(placeholder);
     z-index: 9;
     line-height: 1.5;
     color: #555;
     word-break: break-all;
     user-select: none; }
-  div[contenteditable][placeholder]:empty:focus::before {
+  #textarea.empty:focus::before {
     content: ""; }
+  #textarea.empty {
+    position: relative; }
 
 .dialog__textarea.has-content::before {
   display: none; }
