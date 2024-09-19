@@ -1,19 +1,21 @@
 // Основные стили
+
 .popover {
   z-index: 50;
   max-width: 20rem; // 320px
   position: absolute;
   top: 57px;
+  left: calc(50% - var(--popover-width) / 2); /* Центрируем с помощью переменной */
   border-radius: 1rem; // 16px
   display: none;
   background-color: var(--bg-popup);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--btn-border);
   padding: 0.5rem 0; // 8px
-  min-width: 21.25rem; // 340px
+  // min-width: 21.25rem; // 340px
+  min-width: var(--popover-width); // Используем переменну
   overflow: hidden;
   outline: none;
-
   animation: fade-in 0.3s ease-out;
 
   &.active {
@@ -41,6 +43,11 @@
     position: relative;
     border-radius: 9999px;
     cursor: pointer;
+  }
+
+  @media (min-width: 767.98px) {
+    left: 53px;
+    
   }
 }
 

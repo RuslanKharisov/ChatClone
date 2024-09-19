@@ -153,9 +153,9 @@ li {
 
 .chat__container {
   margin: 0 auto; }
-  @media (min-width: 767.98px) {
+  @media (min-width: 768px) {
     .chat__container {
-      max-width: 768px; } }
+      width: 768px; } }
 
 .chat__message-content {
   font-size: 1rem;
@@ -213,6 +213,7 @@ li {
   --btnTriggerHover: #f9f9f9;
   --popoverHeading: #333333;
   --popoverText: #666666;
+  --popover-width: 340px;
   --bg-hover: #f5f5f5;
   --btn-border: #d7d7d7;
   --color-text: #000000;
@@ -518,13 +519,15 @@ li {
   max-width: 20rem;
   position: absolute;
   top: 57px;
+  left: calc(50% - var(--popover-width) / 2);
+  /* Центрируем с помощью переменной */
   border-radius: 1rem;
   display: none;
   background-color: var(--bg-popup);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--btn-border);
   padding: 0.5rem 0;
-  min-width: 21.25rem;
+  min-width: var(--popover-width);
   overflow: hidden;
   outline: none;
   animation: fade-in 0.3s ease-out; }
@@ -542,6 +545,9 @@ li {
     position: relative;
     border-radius: 9999px;
     cursor: pointer; }
+  @media (min-width: 767.98px) {
+    .popover {
+      left: 53px; } }
 
 .popover-content {
   padding: 1rem; }
