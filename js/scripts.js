@@ -60,6 +60,7 @@ textarea.addEventListener("input", function () {
   }
 });
 
+
 if (textarea.textContent.trim() !== "") {
   // textarea.classList.add("has-content");
   sendButton.disabled = false;
