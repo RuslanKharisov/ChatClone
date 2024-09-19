@@ -19,10 +19,11 @@
 }
 
 .dialog__container {
-  margin: 0 auto;
+  margin: 0 0.75rem;
 
   @media (min-width: 768px) {
     max-width: 768px;
+    margin: 0 auto;
   }
 }
 

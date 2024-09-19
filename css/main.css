@@ -340,10 +340,11 @@ li {
       padding: 0 1.25rem; } }
 
 .dialog__container {
-  margin: 0 auto; }
+  margin: 0 0.75rem; }
   @media (min-width: 768px) {
     .dialog__container {
-      max-width: 768px; } }
+      max-width: 768px;
+      margin: 0 auto; } }
 
 .dialog__form_buttons {
   padding: 0 12px;
