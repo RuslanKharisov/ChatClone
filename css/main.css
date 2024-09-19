@@ -446,20 +446,23 @@ li {
   /* для старых браузеров */
   overflow-wrap: break-word;
   /* для современных браузеров */ }
-  .dialog__textarea p {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-wrap: break-word;
-    /* Переносит длинные слова */ }
 
 [contenteditable]:focus {
   outline: 0px solid transparent; }
 
-.dialog__textarea::before {
-  content: attr(data-placeholder);
-  color: #aaa;
-  pointer-events: none; }
+div[contenteditable] {
+  margin: 0.5rem 0;
+  overflow-wrap: break-word;
+  /* Placeholder code */ }
+  div[contenteditable][placeholder]:empty::before {
+    content: attr(placeholder);
+    z-index: 9;
+    line-height: 1.5;
+    color: #555;
+    word-break: break-all;
+    user-select: none; }
+  div[contenteditable][placeholder]:empty:focus::before {
+    content: ""; }
 
 .dialog__textarea.has-content::before {
   display: none; }

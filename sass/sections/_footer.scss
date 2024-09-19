@@ -147,24 +147,42 @@
   overflow-y: auto;
   word-wrap: break-word; /* для старых браузеров */
   overflow-wrap: break-word; /* для современных браузеров */
-
-  p {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-wrap: break-word; /* Переносит длинные слова */
-  }
 }
 
 [contenteditable]:focus {
   outline: 0px solid transparent;
 }
 
-.dialog__textarea::before {
-  content: attr(data-placeholder);
-  color: #aaa;
-  pointer-events: none;
+// test
+
+div[contenteditable] {
+  margin: 0.5rem 0;
+  overflow-wrap: break-word;
+  
+
+  /* Placeholder code */
+  &[placeholder]:empty::before {
+    content: attr(placeholder);
+    z-index: 9;
+    line-height: 1.5;
+    color: #555;
+    word-break: break-all;
+    user-select: none;
+  }
+
+  &[placeholder]:empty:focus::before {
+    content: "";
+  }
 }
+
+// test
+
+
+// .dialog__textarea::before {
+//   content: attr(data-placeholder);
+//   color: #aaa;
+//   pointer-events: none;
+// }
 
 .dialog__textarea.has-content::before {
   display: none;
@@ -224,3 +242,5 @@
 .footer_notes-wrapper {
   min-height: 1rem;
 }
+
+

@@ -34,23 +34,23 @@ initPopoverAuth();
 initModalClearChat();
 initPopoverAdditional();
 
-textarea.addEventListener("input", function () {
-  if (textarea.textContent.trim() !== "") {
-    textarea.classList.add("has-content");
-    sendButton.disabled = false;
-  } else {
-    textarea.classList.remove("has-content");
-    sendButton.disabled = true;
-  }
-});
+// textarea.addEventListener("input", function () {
+//   if (textarea.textContent.trim() !== "") {
+//     textarea.classList.add("has-content");
+//     sendButton.disabled = false;
+//   } else {
+//     textarea.classList.remove("has-content");
+//     sendButton.disabled = true;
+//   }
+// });
 
-if (textarea.textContent.trim() !== "") {
-  textarea.classList.add("has-content");
-  sendButton.disabled = false;
-} else {
-  textarea.classList.remove("has-content");
-  sendButton.disabled = true;
-}
+// if (textarea.textContent.trim() !== "") {
+//   textarea.classList.add("has-content");
+//   sendButton.disabled = false;
+// } else {
+//   textarea.classList.remove("has-content");
+//   sendButton.disabled = true;
+// }
 
 // Инициализация popover с авторизацией
 function initPopoverAuth() {
