@@ -47,7 +47,6 @@
 
   @media (min-width: 767.98px) {
     left: 53px;
-    
   }
 }
 
@@ -88,6 +87,7 @@
   & .btn--login,
   .btn--signup {
     padding: 8px 14px;
+    display: block;
   }
 }
 

@@ -576,7 +576,8 @@ li {
     font-size: 14px; }
   .popover-buttons .btn--login,
   .popover-buttons .btn--signup {
-    padding: 8px 14px; }
+    padding: 8px 14px;
+    display: block; }
 
 @keyframes fade-in {
   from {
