@@ -5,9 +5,6 @@ const wellcome__page = document.getElementById("wellcome__page");
 const btns_grid = document.getElementById("btns_grid");
 const chat = document.getElementById("chat");
 
-theme.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
 
 // Применить тему при загрузке страницы
 const systemPrefersDark = window.matchMedia(
@@ -52,10 +49,8 @@ togglePlaceholder();
 
 textarea.addEventListener("input", function () {
   if (textarea.textContent.trim() !== "") {
-    // textarea.classList.add("has-content");
     sendButton.disabled = false;
   } else {
-    // textarea.classList.remove("has-content");
     sendButton.disabled = true;
   }
 });

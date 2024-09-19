@@ -11,39 +11,17 @@
 *::after {
   box-sizing: border-box; }
 
-/* :focus,
-:active {
-	outline: none;
-} */
 /* Links */
 a, a:visited {
   text-decoration: none;
   display: inline-block; }
 
 /* Common */
-/* aside, nav, footer, header, section, main {
-	display: block;
-} */
-/* h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
-	font-weight: inherit;
-} */
-/* ul {
-	list-style: none;
-} */
-/* img, svg {
-	display: block;
-	max-width: 100%;
-	height: auto;
-} */
 /* Form */
 input, textarea, button, select {
   font-family: inherit;
   font-size: inherit; }
 
-/* input::-ms-clear {
-	display: none;
-} */
 button, input[type="submit"] {
   display: inline-block;
   box-shadow: none;
@@ -51,20 +29,6 @@ button, input[type="submit"] {
   background: none;
   cursor: pointer; }
 
-/* input:focus, input:active,
-button:focus, button:active {
-    outline: none;
-} */
-/* button::-moz-focus-inner {
-	padding: 0;
-	border: 0;
-} */
-/* label {
-	cursor: pointer;
-} */
-/* legend {
-	display: block;
-} */
 body {
   font-family: ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
@@ -304,25 +268,6 @@ li {
     .btn--signup {
       display: block; } }
 
-.header__rightside button {
-  background-color: greenyellow;
-  font-size: 10px;
-  border-radius: 26px;
-  padding: 5px 10px; }
-
-.temp_menu-menu {
-  background-color: #dadada;
-  display: flex;
-  gap: 10px;
-  padding: 5px;
-  justify-content: center; }
-
-.temp_menu-menu button {
-  background-color: greenyellow;
-  font-size: 10px;
-  border-radius: 26px;
-  padding: 5px 10px; }
-
 .footer {
   width: 100%; }
   @media (min-width: 767.98px) {
@@ -467,9 +412,6 @@ li {
     content: ""; }
   #textarea.empty {
     position: relative; }
-
-.dialog__textarea.has-content::before {
-  display: none; }
 
 .dialog__send-button {
   display: flex;
